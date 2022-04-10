@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Created with love with Fever and balls juice"
+    />
+    <title>Opossum Cover</title>
+  </head>
+  <script type="text/javascript">
+    window.addEventListener("load", function (event) {
+      const txts = new Array(44).fill(0).map((n, i) => `poople (${i + 1}).txt`);
+      const mp3s = new Array(22).fill(0).map((n, i) => `poople (${i + 1}).mp3`);
+      const pngs = new Array(25).fill(0).map((n, i) => `poople (${i + 1}).png`);
+      const jpgs = new Array(8).fill(0).map((n, i) => `poople (${i + 1}).jpg`);
+      const jpegs = new Array(2)
+        .fill(0)
+        .map((n, i) => `poople (${i + 1}).jpeg`);
+      const gift = new Array(1).fill(0).map((n, i) => `poople (1).gif`);
+
+      var pooples = gift
+        .concat(jpegs)
+        .concat(jpgs)
+        .concat(pngs)
+        .concat(mp3s)
+        .concat(txts);
+
+      function getPoople() {
+        const toopile = pooples[Math.floor(Math.random() * pooples.length)];
+        const a = document.createElement("a");
+        a.style.display = "none";
+        a.href = `./public/pooples/${toopile}`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      }
+      document.getElementById("froom").addEventListener("click", getPoople);
+    });
+  </script>
+  <body>
+    <noscript> Pas de java pas de cadeaux </noscript>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+        width: 100vw;
+        height: 100vh;
+      }
+      #froom {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+    <img id="froom" src="./public/whirlpoorl.webp" alt="electromenager" />
+  </body>
+</html>
